@@ -15,6 +15,9 @@
 		AF0281992A1240DC000C7BFA /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0281982A1240DC000C7BFA /* Coordinator.swift */; };
 		AF02819B2A124410000C7BFA /* TrendingRepoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF02819A2A124410000C7BFA /* TrendingRepoViewController.xib */; };
 		AF0281A92A126EE3000C7BFA /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0281A82A126EE3000C7BFA /* CoordinatorTests.swift */; };
+		AF0281AC2A127951000C7BFA /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0281AB2A127951000C7BFA /* RequestProtocol.swift */; };
+		AF0281AF2A1288CE000C7BFA /* RequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0281AE2A1288CE000C7BFA /* RequestTests.swift */; };
+		AF0281B32A128930000C7BFA /* RequestStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0281B22A128930000C7BFA /* RequestStub.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +42,10 @@
 		AF0281982A1240DC000C7BFA /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		AF02819A2A124410000C7BFA /* TrendingRepoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendingRepoViewController.xib; sourceTree = "<group>"; };
 		AF0281A82A126EE3000C7BFA /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
+		AF0281AB2A127951000C7BFA /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
+		AF0281AE2A1288CE000C7BFA /* RequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTests.swift; sourceTree = "<group>"; };
+		AF0281B22A128930000C7BFA /* RequestStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestStub.swift; sourceTree = "<group>"; };
+		AFD1797A2A129FAB00D83548 /* RT.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = RT.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +69,7 @@
 		AF02815A2A123B7E000C7BFA = {
 			isa = PBXGroup;
 			children = (
+				AFD1797A2A129FAB00D83548 /* RT.xctestplan */,
 				AF0281652A123B7E000C7BFA /* RT */,
 				AF02817C2A123B81000C7BFA /* RTTests */,
 				AF0281642A123B7E000C7BFA /* Products */,
@@ -82,6 +90,7 @@
 			children = (
 				AF0281962A123F27000C7BFA /* App Delegate */,
 				AF0281972A123F38000C7BFA /* App Coordinator */,
+				AF0281AA2A127909000C7BFA /* Network Layer */,
 				AF02819C2A124B13000C7BFA /* Scenes */,
 				AF02819D2A124B31000C7BFA /* Resources */,
 				AF0281742A123B80000C7BFA /* Info.plist */,
@@ -92,7 +101,9 @@
 		AF02817C2A123B81000C7BFA /* RTTests */ = {
 			isa = PBXGroup;
 			children = (
+				AF0281B42A129958000C7BFA /* Stub */,
 				AF0281A82A126EE3000C7BFA /* CoordinatorTests.swift */,
+				AF0281AE2A1288CE000C7BFA /* RequestTests.swift */,
 			);
 			path = RTTests;
 			sourceTree = "<group>";
@@ -138,6 +149,22 @@
 				AF02819A2A124410000C7BFA /* TrendingRepoViewController.xib */,
 			);
 			path = TrendingRepo;
+			sourceTree = "<group>";
+		};
+		AF0281AA2A127909000C7BFA /* Network Layer */ = {
+			isa = PBXGroup;
+			children = (
+				AF0281AB2A127951000C7BFA /* RequestProtocol.swift */,
+			);
+			path = "Network Layer";
+			sourceTree = "<group>";
+		};
+		AF0281B42A129958000C7BFA /* Stub */ = {
+			isa = PBXGroup;
+			children = (
+				AF0281B22A128930000C7BFA /* RequestStub.swift */,
+			);
+			path = Stub;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +293,7 @@
 			files = (
 				AF0281992A1240DC000C7BFA /* Coordinator.swift in Sources */,
 				AF02816B2A123B7E000C7BFA /* TrendingRepoViewController.swift in Sources */,
+				AF0281AC2A127951000C7BFA /* RequestProtocol.swift in Sources */,
 				AF0281672A123B7E000C7BFA /* AppDelegate.swift in Sources */,
 				AF0281692A123B7E000C7BFA /* SceneDelegate.swift in Sources */,
 			);
@@ -276,6 +304,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF0281A92A126EE3000C7BFA /* CoordinatorTests.swift in Sources */,
+				AF0281B32A128930000C7BFA /* RequestStub.swift in Sources */,
+				AF0281AF2A1288CE000C7BFA /* RequestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
