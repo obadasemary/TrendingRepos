@@ -15,4 +15,3 @@ class TrendingRepoViewController: UIViewController {
         view.backgroundColor = .red
     }
 }
-

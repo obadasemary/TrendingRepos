@@ -17,8 +17,8 @@ class MainCoordinator: Coordinator {
 
     var navigationController: UINavigationController
 
-    init(_navigationController: UINavigationController) {
-        self.navigationController = _navigationController
+    init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
     }
 
     func setRootViewController() {
