@@ -12,8 +12,6 @@
 		AF02816B2A123B7E000C7BFA /* TrendingRepoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF02816A2A123B7E000C7BFA /* TrendingRepoViewController.swift */; };
 		AF0281702A123B80000C7BFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF02816F2A123B80000C7BFA /* Assets.xcassets */; };
 		AF0281732A123B80000C7BFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0281712A123B80000C7BFA /* LaunchScreen.storyboard */; };
-		AF0281882A123B81000C7BFA /* RTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0281872A123B81000C7BFA /* RTUITests.swift */; };
-		AF02818A2A123B81000C7BFA /* RTUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0281892A123B81000C7BFA /* RTUITestsLaunchTests.swift */; };
 		AF0281992A1240DC000C7BFA /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0281982A1240DC000C7BFA /* Coordinator.swift */; };
 		AF02819B2A124410000C7BFA /* TrendingRepoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF02819A2A124410000C7BFA /* TrendingRepoViewController.xib */; };
 		AF0281A92A126EE3000C7BFA /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0281A82A126EE3000C7BFA /* CoordinatorTests.swift */; };
@@ -21,13 +19,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		AF02817A2A123B81000C7BFA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AF02815B2A123B7E000C7BFA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AF0281622A123B7E000C7BFA;
-			remoteInfo = RT;
-		};
-		AF0281842A123B81000C7BFA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AF02815B2A123B7E000C7BFA /* Project object */;
 			proxyType = 1;
@@ -45,9 +36,6 @@
 		AF0281722A123B80000C7BFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF0281742A123B80000C7BFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF0281792A123B81000C7BFA /* RTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF0281832A123B81000C7BFA /* RTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF0281872A123B81000C7BFA /* RTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTUITests.swift; sourceTree = "<group>"; };
-		AF0281892A123B81000C7BFA /* RTUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AF0281982A1240DC000C7BFA /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		AF02819A2A124410000C7BFA /* TrendingRepoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendingRepoViewController.xib; sourceTree = "<group>"; };
 		AF0281A82A126EE3000C7BFA /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
@@ -68,13 +56,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AF0281802A123B81000C7BFA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -83,7 +64,6 @@
 			children = (
 				AF0281652A123B7E000C7BFA /* RT */,
 				AF02817C2A123B81000C7BFA /* RTTests */,
-				AF0281862A123B81000C7BFA /* RTUITests */,
 				AF0281642A123B7E000C7BFA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -93,7 +73,6 @@
 			children = (
 				AF0281632A123B7E000C7BFA /* RT.app */,
 				AF0281792A123B81000C7BFA /* RTTests.xctest */,
-				AF0281832A123B81000C7BFA /* RTUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,15 +95,6 @@
 				AF0281A82A126EE3000C7BFA /* CoordinatorTests.swift */,
 			);
 			path = RTTests;
-			sourceTree = "<group>";
-		};
-		AF0281862A123B81000C7BFA /* RTUITests */ = {
-			isa = PBXGroup;
-			children = (
-				AF0281872A123B81000C7BFA /* RTUITests.swift */,
-				AF0281892A123B81000C7BFA /* RTUITestsLaunchTests.swift */,
-			);
-			path = RTUITests;
 			sourceTree = "<group>";
 		};
 		AF0281962A123F27000C7BFA /* App Delegate */ = {
@@ -209,24 +179,6 @@
 			productReference = AF0281792A123B81000C7BFA /* RTTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		AF0281822A123B81000C7BFA /* RTUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AF0281932A123B81000C7BFA /* Build configuration list for PBXNativeTarget "RTUITests" */;
-			buildPhases = (
-				AF02817F2A123B81000C7BFA /* Sources */,
-				AF0281802A123B81000C7BFA /* Frameworks */,
-				AF0281812A123B81000C7BFA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AF0281852A123B81000C7BFA /* PBXTargetDependency */,
-			);
-			name = RTUITests;
-			productName = RTUITests;
-			productReference = AF0281832A123B81000C7BFA /* RTUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -241,10 +193,6 @@
 						CreatedOnToolsVersion = 14.3;
 					};
 					AF0281782A123B81000C7BFA = {
-						CreatedOnToolsVersion = 14.3;
-						TestTargetID = AF0281622A123B7E000C7BFA;
-					};
-					AF0281822A123B81000C7BFA = {
 						CreatedOnToolsVersion = 14.3;
 						TestTargetID = AF0281622A123B7E000C7BFA;
 					};
@@ -265,7 +213,6 @@
 			targets = (
 				AF0281622A123B7E000C7BFA /* RT */,
 				AF0281782A123B81000C7BFA /* RTTests */,
-				AF0281822A123B81000C7BFA /* RTUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -282,13 +229,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		AF0281772A123B81000C7BFA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AF0281812A123B81000C7BFA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -339,15 +279,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AF02817F2A123B81000C7BFA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AF02818A2A123B81000C7BFA /* RTUITestsLaunchTests.swift in Sources */,
-				AF0281882A123B81000C7BFA /* RTUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -355,11 +286,6 @@
 			isa = PBXTargetDependency;
 			target = AF0281622A123B7E000C7BFA /* RT */;
 			targetProxy = AF02817A2A123B81000C7BFA /* PBXContainerItemProxy */;
-		};
-		AF0281852A123B81000C7BFA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AF0281622A123B7E000C7BFA /* RT */;
-			targetProxy = AF0281842A123B81000C7BFA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -585,42 +511,6 @@
 			};
 			name = Release;
 		};
-		AF0281942A123B81000C7BFA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = KM569NM77P;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.obada.RTUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = RT;
-			};
-			name = Debug;
-		};
-		AF0281952A123B81000C7BFA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = KM569NM77P;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.obada.RTUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = RT;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -647,15 +537,6 @@
 			buildConfigurations = (
 				AF0281912A123B81000C7BFA /* Debug */,
 				AF0281922A123B81000C7BFA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AF0281932A123B81000C7BFA /* Build configuration list for PBXNativeTarget "RTUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AF0281942A123B81000C7BFA /* Debug */,
-				AF0281952A123B81000C7BFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
