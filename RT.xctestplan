@@ -23,18 +23,6 @@
         "identifier" : "AF0281782A123B81000C7BFA",
         "name" : "RTTests"
       }
-    },
-    {
-      "parallelizable" : true,
-      "skippedTests" : [
-        "RTUITests",
-        "RTUITestsLaunchTests"
-      ],
-      "target" : {
-        "containerPath" : "container:RT.xcodeproj",
-        "identifier" : "AF0281822A123B81000C7BFA",
-        "name" : "RTUITests"
-      }
     }
   ],
   "version" : 1
