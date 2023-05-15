@@ -1,0 +1,41 @@
+{
+  "configurations" : [
+    {
+      "id" : "8453EA77-E803-4D4B-A3CB-09E9783A227C",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:RT.xcodeproj",
+      "identifier" : "AF0281622A123B7E000C7BFA",
+      "name" : "RT"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:RT.xcodeproj",
+        "identifier" : "AF0281782A123B81000C7BFA",
+        "name" : "RTTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "skippedTests" : [
+        "RTUITests",
+        "RTUITestsLaunchTests"
+      ],
+      "target" : {
+        "containerPath" : "container:RT.xcodeproj",
+        "identifier" : "AF0281822A123B81000C7BFA",
+        "name" : "RTUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
