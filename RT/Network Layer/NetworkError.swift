@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+enum NetworkError: Error, Equatable {
+    case invalidURL
+    case noDataFound
+    case invalidResponse
+    case badRequest(String?)
+    case serverError(String?)
+    case decoding(String?)
+    case unknown(String?)
+    case corrupetData
+}
