@@ -27,7 +27,8 @@ enum Constants: String {
     case knownPath = "/v1"
     case unknownPath
     case header
-    case urlParameters
+    case params
+    case urlParams
 }
 
 extension RequestStub: RequestProtocol {
@@ -59,7 +60,7 @@ extension RequestStub: RequestProtocol {
         }
     }
 
-    var requestHeader: [String: String]? {
+    var headers: [String: String]? {
         switch self {
         case .acceptableEndPoint:
             return [Constants.header.rawValue: Constants.header.rawValue]
@@ -68,10 +69,19 @@ extension RequestStub: RequestProtocol {
         }
     }
 
-    var urlParams: [String: Any?]? {
+    private var params: [String: Any?]? {
         switch self {
         case .acceptableEndPoint:
-            return [Constants.urlParameters.rawValue: Constants.urlParameters.rawValue]
+            return [Constants.params.rawValue: Constants.params.rawValue]
+        case .unAcceptableEndPoint:
+            return nil
+        }
+    }
+
+    var urlParams: [String: String?]? {
+        switch self {
+        case .acceptableEndPoint:
+            return [Constants.urlParams.rawValue: Constants.urlParams.rawValue]
         case .unAcceptableEndPoint:
             return nil
         }

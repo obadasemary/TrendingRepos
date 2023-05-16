@@ -24,8 +24,26 @@ protocol RequestProtocol {
     var baseUrl: String { get }
     var path: String { get }
     var requestType: RequestType { get }
-    var requestHeader: [String: String]? { get }
-    var urlParams: [String: Any?]? { get }
+    var headers: [String: String]? { get }
+    var params: [String: Any] { get }
+    var urlParams: [String: String?]? { get }
+}
+
+extension RequestProtocol {
+
+    var baseUrl: String {
+        APIConstants.baseURL.rawValue
+    }
+
+    var params: [String: Any] {
+        [:]
+    }
+
+    var urlParams: [String: String?] { [:] }
+
+    var headers: [String: String] {
+        [:]
+    }
 }
 
 extension RequestProtocol {
@@ -36,7 +54,21 @@ extension RequestProtocol {
 
         var request = URLRequest(url: url)
         request.httpMethod = requestType.rawValue
-        request.allHTTPHeaderFields = requestHeader
+        request.allHTTPHeaderFields = headers
+
+        request.setValue(
+            APIConstants.applicationJson.rawValue,
+            forHTTPHeaderField: APIConstants.contentType.rawValue
+        )
+
+        if !params.isEmpty {
+            do {
+                request.httpBody = try JSONSerialization.data(withJSONObject: params)
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+
         request.timeoutInterval = 5.0
         return request
     }
@@ -55,7 +87,7 @@ extension RequestProtocol {
     }
 
     var queryItems: [URLQueryItem]? {
-        guard requestType == .get, let parameters = urlParams else { return nil }
-        return parameters.map({ URLQueryItem(name: $0, value: "\($1 ?? "")") })
+        guard requestType == .get, let urlParams = urlParams else { return nil }
+        return urlParams.map({ URLQueryItem(name: $0, value: $1) })
     }
 }
