@@ -25,7 +25,7 @@ protocol RequestProtocol {
     var path: String { get }
     var requestType: RequestType { get }
     var requestHeader: [String: String]? { get }
-    var urlParameters: [String: Any?]? { get }
+    var urlParams: [String: Any?]? { get }
 }
 
 extension RequestProtocol {
@@ -55,7 +55,7 @@ extension RequestProtocol {
     }
 
     var queryItems: [URLQueryItem]? {
-        guard requestType == .get, let parameters = urlParameters else { return nil }
+        guard requestType == .get, let parameters = urlParams else { return nil }
         return parameters.map({ URLQueryItem(name: $0, value: "\($1 ?? "")") })
     }
 }

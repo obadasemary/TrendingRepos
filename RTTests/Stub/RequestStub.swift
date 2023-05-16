@@ -68,7 +68,7 @@ extension RequestStub: RequestProtocol {
         }
     }
 
-    var urlParameters: [String: Any?]? {
+    var urlParams: [String: Any?]? {
         switch self {
         case .acceptableEndPoint:
             return [Constants.urlParameters.rawValue: Constants.urlParameters.rawValue]
