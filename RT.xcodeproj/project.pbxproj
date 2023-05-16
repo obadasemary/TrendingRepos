@@ -18,7 +18,18 @@
 		AF0281AC2A127951000C7BFA /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0281AB2A127951000C7BFA /* RequestProtocol.swift */; };
 		AF0281AF2A1288CE000C7BFA /* RequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0281AE2A1288CE000C7BFA /* RequestTests.swift */; };
 		AF0281B32A128930000C7BFA /* RequestStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0281B22A128930000C7BFA /* RequestStub.swift */; };
+		AF34445A2A13901400FF8F31 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3444592A13901400FF8F31 /* APIConstants.swift */; };
+		AF3444612A13A75600FF8F31 /* GithubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3444602A13A75600FF8F31 /* GithubRequest.swift */; };
+		AF3444642A13A92400FF8F31 /* TrendingRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3444632A13A92400FF8F31 /* TrendingRepo.swift */; };
+		AF3444662A13A9B900FF8F31 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3444652A13A9B900FF8F31 /* Owner.swift */; };
+		AF34446A2A13B06E00FF8F31 /* TrendingRepoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3444692A13B06E00FF8F31 /* TrendingRepoViewModel.swift */; };
+		AF34446C2A13B42900FF8F31 /* TrendingRepos.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF34446B2A13B42900FF8F31 /* TrendingRepos.swift */; };
+		AF34446E2A13C3FE00FF8F31 /* APIServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF34446D2A13C3FE00FF8F31 /* APIServiceProtocol.swift */; };
+		AF3444702A13D88700FF8F31 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF34446F2A13D88700FF8F31 /* APIService.swift */; };
+		AF3444722A13D8B800FF8F31 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3444712A13D8B800FF8F31 /* URLSessionProtocol.swift */; };
+		AF3444742A1418AB00FF8F31 /* GithubRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3444732A1418AB00FF8F31 /* GithubRequestTests.swift */; };
 		AFD1797C2A1313BA00D83548 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1797B2A1313BA00D83548 /* NetworkError.swift */; };
+		AFD1797F2A13184100D83548 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1797E2A13184100D83548 /* APIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +57,19 @@
 		AF0281AB2A127951000C7BFA /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
 		AF0281AE2A1288CE000C7BFA /* RequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTests.swift; sourceTree = "<group>"; };
 		AF0281B22A128930000C7BFA /* RequestStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestStub.swift; sourceTree = "<group>"; };
+		AF3444592A13901400FF8F31 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		AF3444602A13A75600FF8F31 /* GithubRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRequest.swift; sourceTree = "<group>"; };
+		AF3444632A13A92400FF8F31 /* TrendingRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepo.swift; sourceTree = "<group>"; };
+		AF3444652A13A9B900FF8F31 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		AF3444692A13B06E00FF8F31 /* TrendingRepoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoViewModel.swift; sourceTree = "<group>"; };
+		AF34446B2A13B42900FF8F31 /* TrendingRepos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingRepos.swift; sourceTree = "<group>"; };
+		AF34446D2A13C3FE00FF8F31 /* APIServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceProtocol.swift; sourceTree = "<group>"; };
+		AF34446F2A13D88700FF8F31 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		AF3444712A13D8B800FF8F31 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
+		AF3444732A1418AB00FF8F31 /* GithubRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRequestTests.swift; sourceTree = "<group>"; };
 		AFD1797A2A129FAB00D83548 /* RT.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = RT.xctestplan; sourceTree = "<group>"; };
 		AFD1797B2A1313BA00D83548 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		AFD1797E2A13184100D83548 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +115,7 @@
 				AF0281962A123F27000C7BFA /* App Delegate */,
 				AF0281972A123F38000C7BFA /* App Coordinator */,
 				AF0281AA2A127909000C7BFA /* Network Layer */,
+				AF3444622A13A8F800FF8F31 /* Model */,
 				AF02819C2A124B13000C7BFA /* Scenes */,
 				AF02819D2A124B31000C7BFA /* Resources */,
 				AF0281742A123B80000C7BFA /* Info.plist */,
@@ -106,6 +129,7 @@
 				AF0281B42A129958000C7BFA /* Stub */,
 				AF0281A82A126EE3000C7BFA /* CoordinatorTests.swift */,
 				AF0281AE2A1288CE000C7BFA /* RequestTests.swift */,
+				AF3444732A1418AB00FF8F31 /* GithubRequestTests.swift */,
 			);
 			path = RTTests;
 			sourceTree = "<group>";
@@ -149,6 +173,7 @@
 			children = (
 				AF02816A2A123B7E000C7BFA /* TrendingRepoViewController.swift */,
 				AF02819A2A124410000C7BFA /* TrendingRepoViewController.xib */,
+				AF3444692A13B06E00FF8F31 /* TrendingRepoViewModel.swift */,
 			);
 			path = TrendingRepo;
 			sourceTree = "<group>";
@@ -156,8 +181,14 @@
 		AF0281AA2A127909000C7BFA /* Network Layer */ = {
 			isa = PBXGroup;
 			children = (
-				AF0281AB2A127951000C7BFA /* RequestProtocol.swift */,
+				AF3444592A13901400FF8F31 /* APIConstants.swift */,
 				AFD1797B2A1313BA00D83548 /* NetworkError.swift */,
+				AF0281AB2A127951000C7BFA /* RequestProtocol.swift */,
+				AF3444712A13D8B800FF8F31 /* URLSessionProtocol.swift */,
+				AFD1797E2A13184100D83548 /* APIManager.swift */,
+				AF34446D2A13C3FE00FF8F31 /* APIServiceProtocol.swift */,
+				AF34446F2A13D88700FF8F31 /* APIService.swift */,
+				AF34445F2A13A74400FF8F31 /* Requests */,
 			);
 			path = "Network Layer";
 			sourceTree = "<group>";
@@ -168,6 +199,24 @@
 				AF0281B22A128930000C7BFA /* RequestStub.swift */,
 			);
 			path = Stub;
+			sourceTree = "<group>";
+		};
+		AF34445F2A13A74400FF8F31 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				AF3444602A13A75600FF8F31 /* GithubRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		AF3444622A13A8F800FF8F31 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AF3444632A13A92400FF8F31 /* TrendingRepo.swift */,
+				AF3444652A13A9B900FF8F31 /* Owner.swift */,
+				AF34446B2A13B42900FF8F31 /* TrendingRepos.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,10 +344,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF0281992A1240DC000C7BFA /* Coordinator.swift in Sources */,
+				AF3444702A13D88700FF8F31 /* APIService.swift in Sources */,
+				AF3444662A13A9B900FF8F31 /* Owner.swift in Sources */,
+				AFD1797F2A13184100D83548 /* APIManager.swift in Sources */,
 				AF02816B2A123B7E000C7BFA /* TrendingRepoViewController.swift in Sources */,
 				AF0281AC2A127951000C7BFA /* RequestProtocol.swift in Sources */,
+				AF34445A2A13901400FF8F31 /* APIConstants.swift in Sources */,
+				AF34446C2A13B42900FF8F31 /* TrendingRepos.swift in Sources */,
+				AF3444612A13A75600FF8F31 /* GithubRequest.swift in Sources */,
+				AF34446E2A13C3FE00FF8F31 /* APIServiceProtocol.swift in Sources */,
 				AFD1797C2A1313BA00D83548 /* NetworkError.swift in Sources */,
+				AF3444642A13A92400FF8F31 /* TrendingRepo.swift in Sources */,
+				AF3444722A13D8B800FF8F31 /* URLSessionProtocol.swift in Sources */,
 				AF0281672A123B7E000C7BFA /* AppDelegate.swift in Sources */,
+				AF34446A2A13B06E00FF8F31 /* TrendingRepoViewModel.swift in Sources */,
 				AF0281692A123B7E000C7BFA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,6 +368,7 @@
 			files = (
 				AF0281A92A126EE3000C7BFA /* CoordinatorTests.swift in Sources */,
 				AF0281B32A128930000C7BFA /* RequestStub.swift in Sources */,
+				AF3444742A1418AB00FF8F31 /* GithubRequestTests.swift in Sources */,
 				AF0281AF2A1288CE000C7BFA /* RequestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
