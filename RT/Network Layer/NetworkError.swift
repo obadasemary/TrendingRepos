@@ -11,6 +11,8 @@ enum NetworkError: Error, Equatable {
     case invalidURL
     case noDataFound
     case invalidResponse
+    case invalidServerResponse
+    case noFound(String?)
     case badRequest(String?)
     case serverError(String?)
     case decoding(String?)
