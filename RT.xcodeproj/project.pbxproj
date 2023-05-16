@@ -18,6 +18,7 @@
 		AF0281AC2A127951000C7BFA /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0281AB2A127951000C7BFA /* RequestProtocol.swift */; };
 		AF0281AF2A1288CE000C7BFA /* RequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0281AE2A1288CE000C7BFA /* RequestTests.swift */; };
 		AF0281B32A128930000C7BFA /* RequestStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0281B22A128930000C7BFA /* RequestStub.swift */; };
+		AFD1797C2A1313BA00D83548 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1797B2A1313BA00D83548 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		AF0281AE2A1288CE000C7BFA /* RequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTests.swift; sourceTree = "<group>"; };
 		AF0281B22A128930000C7BFA /* RequestStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestStub.swift; sourceTree = "<group>"; };
 		AFD1797A2A129FAB00D83548 /* RT.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = RT.xctestplan; sourceTree = "<group>"; };
+		AFD1797B2A1313BA00D83548 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				AF0281AB2A127951000C7BFA /* RequestProtocol.swift */,
+				AFD1797B2A1313BA00D83548 /* NetworkError.swift */,
 			);
 			path = "Network Layer";
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				AF0281992A1240DC000C7BFA /* Coordinator.swift in Sources */,
 				AF02816B2A123B7E000C7BFA /* TrendingRepoViewController.swift in Sources */,
 				AF0281AC2A127951000C7BFA /* RequestProtocol.swift in Sources */,
+				AFD1797C2A1313BA00D83548 /* NetworkError.swift in Sources */,
 				AF0281672A123B7E000C7BFA /* AppDelegate.swift in Sources */,
 				AF0281692A123B7E000C7BFA /* SceneDelegate.swift in Sources */,
 			);
