@@ -6,30 +6,27 @@
 //
 
 import XCTest
+@testable import RT
 
 final class GithubRequestTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+    func test_WhenGithubProvided_ThenCreateUrlRequest() {
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+        let sut = GithubRequest.searchRepository
+        let urlRequest = sut.creatUrlRequest()
+        let url = urlRequest?.url
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        guard let url = url else {
+            XCTAssertNil(url)
+            return
         }
-    }
 
+        let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: true)
+
+        XCTAssertEqual(urlComponents?.host, APIConstants.baseURL.rawValue)
+        XCTAssertEqual(urlComponents?.path, "/search/repositories")
+        XCTAssertNotNil(urlComponents?.queryItems)
+        XCTAssertEqual(urlComponents?.queryItems?.count, 1)
+        XCTAssertEqual(urlRequest?.httpMethod, RequestType.get.rawValue)
+    }
 }
