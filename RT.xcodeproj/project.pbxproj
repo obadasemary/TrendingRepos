@@ -44,6 +44,7 @@
 		AF9C75392A1546F900613363 /* TrendingRepoViewController+TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9C75382A1546F900613363 /* TrendingRepoViewController+TableViewDataSource.swift */; };
 		AF9C753C2A154F3800613363 /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = AF9C753B2A154F3800613363 /* SkeletonView */; };
 		AF9C75412A15522900613363 /* TableViewSkeletonDiffableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9C75402A15522900613363 /* TableViewSkeletonDiffableDataSource.swift */; };
+		AF9C75442A157E6200613363 /* Color+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9C75432A157E6200613363 /* Color+Ex.swift */; };
 		AFD1797C2A1313BA00D83548 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1797B2A1313BA00D83548 /* NetworkError.swift */; };
 		AFD1797F2A13184100D83548 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1797E2A13184100D83548 /* APIManager.swift */; };
 /* End PBXBuildFile section */
@@ -97,6 +98,7 @@
 		AF9C75332A152CDF00613363 /* TrendingRepoCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoCellViewModel.swift; sourceTree = "<group>"; };
 		AF9C75382A1546F900613363 /* TrendingRepoViewController+TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrendingRepoViewController+TableViewDataSource.swift"; sourceTree = "<group>"; };
 		AF9C75402A15522900613363 /* TableViewSkeletonDiffableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewSkeletonDiffableDataSource.swift; sourceTree = "<group>"; };
+		AF9C75432A157E6200613363 /* Color+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ex.swift"; sourceTree = "<group>"; };
 		AFD1797A2A129FAB00D83548 /* RT.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = RT.xctestplan; sourceTree = "<group>"; };
 		AFD1797B2A1313BA00D83548 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		AFD1797E2A13184100D83548 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				AF0281AA2A127909000C7BFA /* Network Layer */,
 				AF3444622A13A8F800FF8F31 /* Model */,
 				AF02819C2A124B13000C7BFA /* Scenes */,
+				AF9C75422A157E2500613363 /* Ex */,
 				AF02819D2A124B31000C7BFA /* Resources */,
 				AF0281742A123B80000C7BFA /* Info.plist */,
 			);
@@ -279,6 +282,14 @@
 				AF9C75402A15522900613363 /* TableViewSkeletonDiffableDataSource.swift */,
 			);
 			path = Skeleton;
+			sourceTree = "<group>";
+		};
+		AF9C75422A157E2500613363 /* Ex */ = {
+			isa = PBXGroup;
+			children = (
+				AF9C75432A157E6200613363 /* Color+Ex.swift */,
+			);
+			path = Ex;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -433,6 +444,7 @@
 				AF3444642A13A92400FF8F31 /* TrendingRepo.swift in Sources */,
 				AF3444722A13D8B800FF8F31 /* URLSessionProtocol.swift in Sources */,
 				AF0281672A123B7E000C7BFA /* AppDelegate.swift in Sources */,
+				AF9C75442A157E6200613363 /* Color+Ex.swift in Sources */,
 				AF34446A2A13B06E00FF8F31 /* TrendingRepoViewModel.swift in Sources */,
 				AF0281692A123B7E000C7BFA /* SceneDelegate.swift in Sources */,
 			);
