@@ -23,6 +23,9 @@ class TrendingRepoTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
 
+        repoImageView.layer.cornerRadius = repoImageView.frame.width / 2
+        repoImageView.layer.masksToBounds = false
+        repoImageView.clipsToBounds = true
         repoOwnerLabel.font = .systemFont(ofSize: 16)
         repoOwnerLabel.textColor = .label
         repoNameLabel.font = .boldSystemFont(ofSize: 20)
@@ -34,6 +37,10 @@ class TrendingRepoTableViewCell: UITableViewCell {
         repoLanguageLabel.textColor = .secondaryLabel
         repoStartCountLabel.font = .systemFont(ofSize: 12)
         repoStartCountLabel.textColor = .secondaryLabel
+        repoLanguageView.backgroundColor = .random
+        repoLanguageView.layer.cornerRadius = repoLanguageView.frame.width / 2
+        repoLanguageView.layer.masksToBounds = false
+        repoLanguageView.clipsToBounds = true
     }
 
     func configureRepoCell(with viewModel: TrendingRepoCellViewModelProtocol) {
