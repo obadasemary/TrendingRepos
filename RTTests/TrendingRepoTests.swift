@@ -6,30 +6,78 @@
 //
 
 import XCTest
+@testable import RT
 
 final class TrendingRepoTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func test_WhenInit_ThenDataReturn() {
+
+        let sut = TrendingRepo.stub
+
+        XCTAssertEqual(sut.name, TrendingRepo.stub.name)
+        XCTAssertEqual(sut.description, TrendingRepo.stub.description)
+        XCTAssertEqual(sut.language, TrendingRepo.stub.language)
+        XCTAssertEqual(sut.starCount, TrendingRepo.stub.starCount)
+        XCTAssertEqual(sut.owner, TrendingRepo.stub.owner)
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    func test_WhenInitWithNilLanguage_ThenLanguageNilReturn() {
+
+        let sut = makeSut(
+            name: TrendingRepo.stub.name,
+            description: TrendingRepo.stub.description,
+            starCount: TrendingRepo.stub.starCount,
+            owner: TrendingRepo.stub.owner
+        )
+
+        XCTAssertEqual(sut.name, TrendingRepo.stub.name)
+        XCTAssertEqual(sut.description, TrendingRepo.stub.description)
+        XCTAssertEqual(sut.starCount, TrendingRepo.stub.starCount)
+        XCTAssertEqual(sut.owner, TrendingRepo.stub.owner)
+
+        XCTAssertNil(sut.language)
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func testTrendingRepoHashing() {
+        let owner = Owner.stub
+        let repo = TrendingRepo(
+            name: "Repo",
+            description: "Description",
+            language: "Swift",
+            starCount: 100,
+            owner: owner
+        )
+
+        var hasher1 = Hasher()
+        repo.hash(into: &hasher1)
+
+        var hasher2 = Hasher()
+        repo.hash(into: &hasher2)
+
+        XCTAssertEqual(
+            hasher1.finalize(),
+            hasher2.finalize(),
+            "Hash value for the same TrendingRepo instance should be equal"
+        )
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+    // MARK: - Helper method for making SUT
+    func makeSut(
+        name: String,
+        description: String,
+        language: String? = nil,
+        starCount: Int,
+        owner: Owner
+    ) -> TrendingRepo {
 
+        let repo = TrendingRepo(
+            name: name,
+            description: description,
+            language: language,
+            starCount: starCount,
+            owner: owner
+        )
+
+        return repo
+    }
 }
