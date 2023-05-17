@@ -6,3 +6,9 @@
 //
 
 import Foundation
+@testable import RT
+
+extension TrendingRepos {
+
+    static let stub: TrendingRepos = .init(items: [TrendingRepo.stub])
+}
