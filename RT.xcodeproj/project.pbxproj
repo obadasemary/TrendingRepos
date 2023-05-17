@@ -34,6 +34,8 @@
 		AF34447E2A145D1500FF8F31 /* OwnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF34447D2A145D1500FF8F31 /* OwnerTests.swift */; };
 		AF3444802A145E3600FF8F31 /* TrendingRepoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF34447F2A145E3600FF8F31 /* TrendingRepoTests.swift */; };
 		AF3444822A14609F00FF8F31 /* TrendingReposTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3444812A14609F00FF8F31 /* TrendingReposTests.swift */; };
+		AF3444862A14697700FF8F31 /* APIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3444852A14697700FF8F31 /* APIServiceTests.swift */; };
+		AF3444882A146C2600FF8F31 /* MockAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3444872A146C2600FF8F31 /* MockAPIService.swift */; };
 		AFD1797C2A1313BA00D83548 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1797B2A1313BA00D83548 /* NetworkError.swift */; };
 		AFD1797F2A13184100D83548 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1797E2A13184100D83548 /* APIManager.swift */; };
 /* End PBXBuildFile section */
@@ -79,6 +81,8 @@
 		AF34447D2A145D1500FF8F31 /* OwnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerTests.swift; sourceTree = "<group>"; };
 		AF34447F2A145E3600FF8F31 /* TrendingRepoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoTests.swift; sourceTree = "<group>"; };
 		AF3444812A14609F00FF8F31 /* TrendingReposTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposTests.swift; sourceTree = "<group>"; };
+		AF3444852A14697700FF8F31 /* APIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceTests.swift; sourceTree = "<group>"; };
+		AF3444872A146C2600FF8F31 /* MockAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIService.swift; sourceTree = "<group>"; };
 		AFD1797A2A129FAB00D83548 /* RT.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = RT.xctestplan; sourceTree = "<group>"; };
 		AFD1797B2A1313BA00D83548 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		AFD1797E2A13184100D83548 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
@@ -145,6 +149,8 @@
 				AF34447F2A145E3600FF8F31 /* TrendingRepoTests.swift */,
 				AF34447D2A145D1500FF8F31 /* OwnerTests.swift */,
 				AF3444812A14609F00FF8F31 /* TrendingReposTests.swift */,
+				AF3444872A146C2600FF8F31 /* MockAPIService.swift */,
+				AF3444852A14697700FF8F31 /* APIServiceTests.swift */,
 			);
 			path = RTTests;
 			sourceTree = "<group>";
@@ -384,9 +390,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF3444882A146C2600FF8F31 /* MockAPIService.swift in Sources */,
 				AF3444822A14609F00FF8F31 /* TrendingReposTests.swift in Sources */,
 				AF0281A92A126EE3000C7BFA /* CoordinatorTests.swift in Sources */,
 				AF34447E2A145D1500FF8F31 /* OwnerTests.swift in Sources */,
+				AF3444862A14697700FF8F31 /* APIServiceTests.swift in Sources */,
 				AF3444782A145B3900FF8F31 /* OwnerStub.swift in Sources */,
 				AF0281B32A128930000C7BFA /* RequestStub.swift in Sources */,
 				AF3444742A1418AB00FF8F31 /* GithubRequestTests.swift in Sources */,
