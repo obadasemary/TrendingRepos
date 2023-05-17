@@ -7,13 +7,14 @@
 
 import Foundation
 
-protocol TrendingRepoViewModelType {
+protocol TrendingRepoViewModelProtocol {
 
     var trendingRepos: [TrendingRepo] { get }
     func fetchTrendingRepositories(completionHanlder: @escaping ([TrendingRepo]?, NetworkError?) -> Void)
+    func makeTrendingRepositoriesCellViewModel(at index: Int) -> TrendingRepoCellViewModelProtocol
 }
 
-final class TrendingRepoViewModel: TrendingRepoViewModelType {
+final class TrendingRepoViewModel: TrendingRepoViewModelProtocol {
 
     private(set) var trendingRepos: [TrendingRepo] = []
 
