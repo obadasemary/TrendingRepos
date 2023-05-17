@@ -38,4 +38,25 @@ final class TrendingRepoViewModel: TrendingRepoViewModelProtocol {
             }
         }
     }
+
+    func makeTrendingRepositoriesCellViewModel(at index: Int) -> TrendingRepoCellViewModelProtocol {
+
+        let trendingRepo = trendingRepos[index]
+        var avatarUrl: URL
+
+        if URL(string: trendingRepo.owner.avatarUrl) != nil {
+            avatarUrl = URL(string: trendingRepo.owner.avatarUrl)!
+        } else {
+            avatarUrl = URL(string: "")!
+        }
+
+        return TrendingRepoCellViewModel(
+            repoAvatarUrl: avatarUrl,
+            repoName: trendingRepo.name,
+            repoOwner: trendingRepo.owner.login,
+            repoDescription: trendingRepo.description,
+            repoLanguage: trendingRepo.language ?? "",
+            repoStarCount: "\(trendingRepo.starCount)"
+        )
+    }
 }
