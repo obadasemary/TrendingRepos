@@ -46,6 +46,7 @@ class TrendingRepoViewController: UIViewController {
 
     func configureTableView() {
 
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.register(
             UINib(nibName: trendingRepoTableViewCell, bundle: nil),
             forCellReuseIdentifier: TrendingRepoTableViewCell.identifier
