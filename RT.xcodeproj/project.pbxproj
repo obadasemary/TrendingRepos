@@ -93,6 +93,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF9C753C2A154F3800613363 /* SkeletonView in Frameworks */,
+				AF9C75372A15444600613363 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +262,10 @@
 			dependencies = (
 			);
 			name = RT;
+			packageProductDependencies = (
+				AF9C75362A15444600613363 /* Kingfisher */,
+				AF9C753B2A154F3800613363 /* SkeletonView */,
+			);
 			productName = RT;
 			productReference = AF0281632A123B7E000C7BFA /* RT.app */;
 			productType = "com.apple.product-type.application";
@@ -310,6 +316,10 @@
 				Base,
 			);
 			mainGroup = AF02815A2A123B7E000C7BFA;
+			packageReferences = (
+				AF9C75352A15444600613363 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				AF9C753A2A154F3800613363 /* XCRemoteSwiftPackageReference "SkeletonView" */,
+			);
 			productRefGroup = AF0281642A123B7E000C7BFA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -668,6 +678,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AF9C75352A15444600613363 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		AF9C753A2A154F3800613363 /* XCRemoteSwiftPackageReference "SkeletonView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Juanpe/SkeletonView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AF9C75362A15444600613363 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF9C75352A15444600613363 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		AF9C753B2A154F3800613363 /* SkeletonView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF9C753A2A154F3800613363 /* XCRemoteSwiftPackageReference "SkeletonView" */;
+			productName = SkeletonView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AF02815B2A123B7E000C7BFA /* Project object */;
 }
