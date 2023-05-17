@@ -6,30 +6,97 @@
 //
 
 import XCTest
+@testable import RT
 
 final class APIServiceTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+    func test_WhenEndPoindProvided_ThenFetchDataSuccessfully() {
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+        let expectation = expectation(description: "Success Expectation")
+        let sut = APIService()
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
+        sut.fetchTrendingRepos { result in
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+            expectation.fulfill()
+
+            switch result {
+            case.success(let trendingRepo):
+                XCTAssertTrue(trendingRepo.count > 0)
+            case .failure(let error):
+                XCTFail("we have an error \(error) Unfortunately")
+            }
         }
+
+        waitForExpectations(timeout: 2.0)
     }
 
+    func test_WhenEndPointProvidedWithRestAPI_ThenFetchDataSuccessfully() {
+
+        let expectation = expectation(description: "Success Expectation")
+        let sut = APIService()
+
+        sut.fetchTrendingRepos { result in
+
+            expectation.fulfill()
+
+            switch result {
+            case.success(let trendingRepo):
+                XCTAssertTrue(trendingRepo.count > 0)
+            case .failure(let error):
+                XCTFail("we have an error \(error) Unfortunately")
+            }
+        }
+
+        waitForExpectations(timeout: 2.0)
+    }
+
+    func test_WhenEndPointProvidedWithMockAPI_ThenFetchDataSuccessfully() {
+
+        let expectation = expectation(description: "Success Expectation")
+        let sut = MockSuccessAPIService()
+        let stub = TrendingRepos.stub.items
+        let repo = stub.first
+
+        sut.fetchTrendingRepos { result in
+
+            expectation.fulfill()
+
+            switch result {
+            case.success(let trendingRepo):
+
+                XCTAssertTrue(trendingRepo.count > 0)
+
+                let result = trendingRepo.first
+                XCTAssertEqual(result?.name, repo?.name)
+                XCTAssertEqual(result?.description, repo?.description)
+                XCTAssertEqual(result?.language, repo?.language)
+                XCTAssertEqual(result?.starCount, repo?.starCount)
+                XCTAssertEqual(result?.owner, repo?.owner)
+            case .failure(let error):
+                XCTFail("we have an error \(error) Unfortunately")
+            }
+        }
+
+        waitForExpectations(timeout: 2.0)
+    }
+
+    func test_WhenEndPointProvidedWithMockAPI_ThenFetchDataFailure() {
+
+        let expectation = expectation(description: "Failure Expectation")
+        let sut = MockFailureAPIService()
+
+        sut.fetchTrendingRepos { result in
+
+            expectation.fulfill()
+
+            switch result {
+            case.success(let trendingRepo):
+                XCTFail("Fail if we have an error \(trendingRepo) Unfortunately")
+            case .failure(let error):
+                XCTAssertEqual(error, .noDataFound)
+            }
+        }
+
+        waitForExpectations(timeout: 2.0)
+    }
 }
