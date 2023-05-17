@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TrendingRepoViewController" customModule="RT" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="MY4-Hd-zlw" id="xoO-3R-vdz"/>
                 <outlet property="view" destination="rYY-bh-wcP" id="pEj-jQ-feO"/>
             </connections>
         </placeholder>
@@ -18,8 +19,23 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="rYY-bh-wcP">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MY4-Hd-zlw">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </tableView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="3ec-6O-fyY"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="3ec-6O-fyY" firstAttribute="bottom" secondItem="MY4-Hd-zlw" secondAttribute="bottom" id="0mr-aA-h7i"/>
+                <constraint firstItem="MY4-Hd-zlw" firstAttribute="top" secondItem="3ec-6O-fyY" secondAttribute="top" id="mcG-Eg-tRG"/>
+                <constraint firstItem="MY4-Hd-zlw" firstAttribute="leading" secondItem="3ec-6O-fyY" secondAttribute="leading" id="vHX-x6-ZVx"/>
+                <constraint firstItem="3ec-6O-fyY" firstAttribute="trailing" secondItem="MY4-Hd-zlw" secondAttribute="trailing" id="vYP-Qg-1zJ"/>
+            </constraints>
             <point key="canvasLocation" x="84.732824427480907" y="20.422535211267608"/>
         </view>
     </objects>
