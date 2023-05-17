@@ -6,30 +6,62 @@
 //
 
 import XCTest
+@testable import RT
 
 final class TrendingReposTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func test_WhenInit_ThenDataReturn() {
+
+        let sut = TrendingRepos.stub
+        let item = sut.items.first
+
+        XCTAssertEqual(sut.items.count, 1)
+        XCTAssertEqual(item?.name, TrendingRepos.stub.items.first?.name)
+        XCTAssertEqual(item?.description, TrendingRepos.stub.items.first?.description)
+        XCTAssertEqual(item?.language, TrendingRepos.stub.items.first?.language)
+        XCTAssertEqual(item?.starCount, TrendingRepos.stub.items.first?.starCount)
+        XCTAssertEqual(item?.owner, TrendingRepos.stub.items.first?.owner)
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+    func testTrendingReposDecoding() throws {
+        let json = """
+            {
+                "items": [
+                    {
+                        "name": "Repo 1",
+                        "description": "Description 1",
+                        "language": "Swift",
+                        "stargazers_count": 100,
+                        "owner": {
+                            "login": "John",
+                            "avatar_url": "https://example.com/avatar1.png"
+                        }
+                    },
+                    {
+                        "name": "Repo 2",
+                        "description": "Description 2",
+                        "language": "Java",
+                        "stargazers_count": 200,
+                        "owner": {
+                            "login": "Jane",
+                            "avatar_url": "https://example.com/avatar2.png"
+                        }
+                    }
+                ]
+            }
+            """
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
+        let jsonData = Data(json.utf8)
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+        let decoder = JSONDecoder()
+        let trendingRepos = try decoder.decode(TrendingRepos.self, from: jsonData)
 
+        XCTAssertEqual(trendingRepos.items.count, 2, "Expected two items in TrendingRepos")
+        XCTAssertEqual(trendingRepos.items[0].name, "Repo 1", "Expected correct name for the first TrendingRepo")
+        XCTAssertEqual(
+            trendingRepos.items[1].owner.login,
+            "Jane",
+            "Expected correct owner login for the second TrendingRepo"
+        )
+    }
 }
