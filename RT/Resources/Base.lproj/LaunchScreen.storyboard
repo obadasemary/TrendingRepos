@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="w4e-AT-XFJ">
-                                <rect key="frame" x="21.666666666666657" y="228.99999999999997" width="350" height="394.33333333333326"/>
+                                <rect key="frame" x="21.666666666666657" y="128.99999999999997" width="350" height="394.33333333333326"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="github" translatesAutoresizingMaskIntoConstraints="NO" id="8CV-iF-dQ7">
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="350"/>
@@ -37,7 +37,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SADAPAY Exercise" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DW9-xf-ryT">
-                                                <rect key="frame" x="0.0" y="26.333333333333371" width="278.33333333333331" height="18"/>
+                                                <rect key="frame" x="0.0" y="26.333333333333314" width="278.33333333333331" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -50,7 +50,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="w4e-AT-XFJ" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="czc-yt-APQ"/>
+                            <constraint firstItem="w4e-AT-XFJ" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-100" id="czc-yt-APQ"/>
                             <constraint firstItem="w4e-AT-XFJ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="t0l-pu-rUd"/>
                         </constraints>
                     </view>
