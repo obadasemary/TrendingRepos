@@ -26,7 +26,7 @@ class TrendingRepoTableViewCell: UITableViewCell {
         repoImageView.layer.cornerRadius = repoImageView.frame.width / 2
         repoImageView.layer.masksToBounds = false
         repoImageView.clipsToBounds = true
-        repoOwnerLabel.font = .systemFont(ofSize: 16)
+        repoOwnerLabel.font = .systemFont(ofSize: 12)
         repoOwnerLabel.textColor = .label
         repoNameLabel.font = .boldSystemFont(ofSize: 20)
         repoNameLabel.textColor = .label
