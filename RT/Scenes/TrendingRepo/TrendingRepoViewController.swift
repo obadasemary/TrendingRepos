@@ -10,6 +10,13 @@ import UIKit
 private let trendingRepoTableViewCell = "TrendingRepoTableViewCell"
 private let trendingRepoScreenTitle = "Trending"
 
+enum Section {
+
+    case trendingRepositories
+}
+
+typealias TableDataSource = UITableViewDiffableDataSource<Section, TrendingRepo>
+
 class TrendingRepoViewController: UIViewController {
 
     // MARK: - @IBOutlet
@@ -18,8 +25,29 @@ class TrendingRepoViewController: UIViewController {
 
     // MARK: - Properties
 
-    lazy var dataSource = configureDataSource()
     var viewModel: TrendingRepoViewModelProtocol
+
+    lazy var dataSource: TableDataSource = {
+
+        let dataSource = TableDataSource(
+            tableView: tableView
+        ) { tableView, indexPath, _ in
+
+            let cell = tableView.dequeueReusableCell(
+                withIdentifier: TrendingRepoTableViewCell.identifier,
+                for: indexPath
+            ) as? TrendingRepoTableViewCell
+            cell?.hideAnimation()
+            let viewModel = self.viewModel.makeTrendingRepositoriesCellViewModel(at: indexPath.row)
+            cell?.configureRepoCell(with: viewModel)
+
+            return cell
+        }
+
+        dataSource.defaultRowAnimation = .fade
+
+        return dataSource
+    }()
 
     // MARK: - Init
 
@@ -51,8 +79,18 @@ class TrendingRepoViewController: UIViewController {
             UINib(nibName: trendingRepoTableViewCell, bundle: nil),
             forCellReuseIdentifier: TrendingRepoTableViewCell.identifier
         )
-        tableView.dataSource = dataSource
         tableView.delegate = self
+    }
+
+    // MARK: - Update SnapShot
+
+    func updateSnapShot(repos: [TrendingRepo]) {
+
+        var snapShot = NSDiffableDataSourceSnapshot<Section, TrendingRepo>()
+        snapShot.appendSections([.trendingRepositories])
+        snapShot.appendItems(repos)
+
+        dataSource.apply(snapShot)
     }
 
     // MARK: - API Perfom
@@ -63,12 +101,11 @@ class TrendingRepoViewController: UIViewController {
             guard let self = self else { return }
 
             if result == nil {
-                DispatchQueue.main.async { [weak self] in
 
-                }
             } else {
-                print("Result \(result?[2])")
-                self.updateSnapShot(repos: result!)
+                DispatchQueue.main.async { [weak self] in
+                    self?.updateSnapShot(repos: result!)
+                }
             }
         }
     }
