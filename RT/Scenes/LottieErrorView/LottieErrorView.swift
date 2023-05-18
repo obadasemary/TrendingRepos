@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import Lottie
 
 class LottieErrorView: UIView {
 
-//    @IBOutlet weak var animationView: LottieAnimationView!
+    static let lottieErrorJson = "lottieError"
+
+    @IBOutlet weak var animationView: LottieAnimationView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subitleLabel: UILabel!
     @IBOutlet weak var retryButton: UIButton!
@@ -23,6 +26,10 @@ class LottieErrorView: UIView {
         retryButton.layer.cornerRadius = 8
         retryButton.layer.borderWidth = 2
         retryButton.layer.borderColor = UIColor.systemGreen.cgColor
+
+        animationView.animation = .named(LottieErrorView.lottieErrorJson)
+        animationView.loopMode = .loop
+        animationView.play()
     }
 
 }
