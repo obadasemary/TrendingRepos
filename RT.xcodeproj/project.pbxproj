@@ -48,6 +48,7 @@
 		AFEB58FB2A16DB6E0088EB4A /* RefreshControl+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEB58FA2A16DB6E0088EB4A /* RefreshControl+Ex.swift */; };
 		AFEB58FE2A16E3DA0088EB4A /* lottieError.json in Resources */ = {isa = PBXBuildFile; fileRef = AFEB58FD2A16E3DA0088EB4A /* lottieError.json */; };
 		AFEB59002A16E93A0088EB4A /* LottieErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEB58FF2A16E93A0088EB4A /* LottieErrorView.swift */; };
+		AFEB59032A16EFFF0088EB4A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = AFEB59022A16EFFF0088EB4A /* Lottie */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,7 @@
 			files = (
 				AF9C753C2A154F3800613363 /* SkeletonView in Frameworks */,
 				AF9C75372A15444600613363 /* Kingfisher in Frameworks */,
+				AFEB59032A16EFFF0088EB4A /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +325,7 @@
 			packageProductDependencies = (
 				AF9C75362A15444600613363 /* Kingfisher */,
 				AF9C753B2A154F3800613363 /* SkeletonView */,
+				AFEB59022A16EFFF0088EB4A /* Lottie */,
 			);
 			productName = RT;
 			productReference = AF0281632A123B7E000C7BFA /* RT.app */;
@@ -377,6 +380,7 @@
 			packageReferences = (
 				AF9C75352A15444600613363 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				AF9C753A2A154F3800613363 /* XCRemoteSwiftPackageReference "SkeletonView" */,
+				AFEB59012A16EFFF0088EB4A /* XCRemoteSwiftPackageReference "lottie-spm" */,
 			);
 			productRefGroup = AF0281642A123B7E000C7BFA /* Products */;
 			projectDirPath = "";
@@ -768,6 +772,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		AFEB59012A16EFFF0088EB4A /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -780,6 +792,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AF9C753A2A154F3800613363 /* XCRemoteSwiftPackageReference "SkeletonView" */;
 			productName = SkeletonView;
+		};
+		AFEB59022A16EFFF0088EB4A /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFEB59012A16EFFF0088EB4A /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
