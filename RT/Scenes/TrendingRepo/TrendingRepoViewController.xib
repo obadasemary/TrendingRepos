@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TrendingRepoViewController" customModule="RT" customModuleProvider="target">
             <connections>
+                <outlet property="lottieErrorView" destination="8k0-nx-Y0o" id="OjG-WP-URr"/>
                 <outlet property="tableView" destination="MY4-Hd-zlw" id="xoO-3R-vdz"/>
                 <outlet property="view" destination="rYY-bh-wcP" id="pEj-jQ-feO"/>
             </connections>

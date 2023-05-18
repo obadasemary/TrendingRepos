@@ -22,6 +22,7 @@ class TrendingRepoViewController: UIViewController {
     // MARK: - @IBOutlet
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var lottieErrorView: LottieErrorView!
     let refreshControl = UIRefreshControl()
 
     // MARK: - Properties
@@ -122,7 +123,9 @@ class TrendingRepoViewController: UIViewController {
             guard let self = self else { return }
 
             if result == nil {
-
+                DispatchQueue.main.async { [weak self] in
+                    self?.lottieErrorView.isHidden = false
+                }
             } else {
                 DispatchQueue.main.async { [weak self] in
                     self?.updateSnapShot(repos: result!)
