@@ -45,6 +45,7 @@
 		AF9C75442A157E6200613363 /* Color+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9C75432A157E6200613363 /* Color+Ex.swift */; };
 		AFD1797C2A1313BA00D83548 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1797B2A1313BA00D83548 /* NetworkError.swift */; };
 		AFD1797F2A13184100D83548 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1797E2A13184100D83548 /* APIManager.swift */; };
+		AFEB58FB2A16DB6E0088EB4A /* RefreshControl+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEB58FA2A16DB6E0088EB4A /* RefreshControl+Ex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		AFD1797A2A129FAB00D83548 /* RT.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = RT.xctestplan; sourceTree = "<group>"; };
 		AFD1797B2A1313BA00D83548 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		AFD1797E2A13184100D83548 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		AFEB58FA2A16DB6E0088EB4A /* RefreshControl+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RefreshControl+Ex.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				AF9C75432A157E6200613363 /* Color+Ex.swift */,
+				AFEB58FA2A16DB6E0088EB4A /* RefreshControl+Ex.swift */,
 			);
 			path = Ex;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				AF3444612A13A75600FF8F31 /* GithubRequest.swift in Sources */,
 				AF34446E2A13C3FE00FF8F31 /* APIServiceProtocol.swift in Sources */,
 				AFD1797C2A1313BA00D83548 /* NetworkError.swift in Sources */,
+				AFEB58FB2A16DB6E0088EB4A /* RefreshControl+Ex.swift in Sources */,
 				AF9C75312A15193200613363 /* TrendingRepoTableViewCell.swift in Sources */,
 				AF3444642A13A92400FF8F31 /* TrendingRepo.swift in Sources */,
 				AF3444722A13D8B800FF8F31 /* URLSessionProtocol.swift in Sources */,
