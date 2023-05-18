@@ -7,6 +7,7 @@
 
 import UIKit
 import Kingfisher
+import SkeletonView
 
 class TrendingRepoTableViewCell: UITableViewCell {
 
@@ -17,6 +18,7 @@ class TrendingRepoTableViewCell: UITableViewCell {
     @IBOutlet var repoNameLabel: UILabel!
     @IBOutlet var repoDescriptionLabel: UILabel!
     @IBOutlet var repoLanguageLabel: UILabel!
+    @IBOutlet var repoStartCountImage: UIImageView!
     @IBOutlet var repoStartCountLabel: UILabel!
     @IBOutlet var repoLanguageView: UIView!
 
@@ -41,9 +43,34 @@ class TrendingRepoTableViewCell: UITableViewCell {
         repoLanguageView.layer.cornerRadius = repoLanguageView.frame.width / 2
         repoLanguageView.layer.masksToBounds = false
         repoLanguageView.clipsToBounds = true
+
+        [
+            repoImageView,
+            repoOwnerLabel,
+            repoNameLabel,
+            repoDescriptionLabel,
+            repoLanguageLabel,
+            repoStartCountImage,
+            repoStartCountLabel,
+            repoLanguageView
+        ].forEach { $0.showAnimatedGradientSkeleton() }
     }
 
-    func configureRepoCell(with viewModel: TrendingRepoTVCellViewModelProtocol) {
+    func hideAnimation() {
+
+        [
+            repoImageView,
+            repoOwnerLabel,
+            repoNameLabel,
+            repoDescriptionLabel,
+            repoLanguageLabel,
+            repoStartCountImage,
+            repoStartCountLabel,
+            repoLanguageView
+        ].forEach { $0.hideSkeleton() }
+    }
+
+    func configureRepoCell(with viewModel: TrendingRepoTVCellViewType) {
 
         repoOwnerLabel.text = viewModel.repoOwner
         repoNameLabel.text = viewModel.repoName

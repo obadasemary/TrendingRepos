@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol TrendingRepoTVCellViewModelProtocol {
+protocol TrendingRepoTVCellViewType {
 
     var repoAvatarUrl: URL { get }
     var repoName: String { get }
@@ -17,7 +17,7 @@ protocol TrendingRepoTVCellViewModelProtocol {
     var repoStarCount: String { get }
 }
 
-class TrendingRepoTVCellViewModel: TrendingRepoTVCellViewModelProtocol {
+class TrendingRepoTVCellViewModel: TrendingRepoTVCellViewType {
 
     var repoAvatarUrl: URL
     var repoName: String

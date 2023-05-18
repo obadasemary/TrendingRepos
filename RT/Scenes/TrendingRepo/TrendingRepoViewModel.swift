@@ -11,7 +11,7 @@ protocol TrendingRepoViewModelProtocol {
 
     var trendingRepos: [TrendingRepo] { get }
     func fetchTrendingRepositories(completionHanlder: @escaping ([TrendingRepo]?) -> Void)
-    func makeTrendingRepositoriesCellViewModel(at index: Int) -> TrendingRepoTVCellViewModelProtocol
+    func makeTrendingRepositoriesCellViewModel(at index: Int) -> TrendingRepoTVCellViewType
 }
 
 final class TrendingRepoViewModel: TrendingRepoViewModelProtocol {
@@ -39,7 +39,7 @@ final class TrendingRepoViewModel: TrendingRepoViewModelProtocol {
         }
     }
 
-    func makeTrendingRepositoriesCellViewModel(at index: Int) -> TrendingRepoTVCellViewModelProtocol {
+    func makeTrendingRepositoriesCellViewModel(at index: Int) -> TrendingRepoTVCellViewType {
 
         let trendingRepo = trendingRepos[index]
         var avatarUrl: URL
