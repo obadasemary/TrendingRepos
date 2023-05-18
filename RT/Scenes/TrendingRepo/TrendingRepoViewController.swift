@@ -37,9 +37,13 @@ class TrendingRepoViewController: UIViewController {
                 withIdentifier: TrendingRepoTableViewCell.identifier,
                 for: indexPath
             ) as? TrendingRepoTableViewCell
-            cell?.hideAnimation()
-            let viewModel = self.viewModel.makeTrendingRepositoriesCellViewModel(at: indexPath.row)
-            cell?.configureRepoCell(with: viewModel)
+
+            DispatchQueue.main.async { [weak self] in
+
+                cell?.hideAnimation()
+                let viewModel = self?.viewModel.makeTrendingRepositoriesCellViewModel(at: indexPath.row)
+                cell?.configureRepoCell(with: viewModel!)
+            }
 
             return cell
         }
