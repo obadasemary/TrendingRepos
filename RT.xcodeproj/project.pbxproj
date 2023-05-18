@@ -36,7 +36,6 @@
 		AF3444822A14609F00FF8F31 /* TrendingReposTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3444812A14609F00FF8F31 /* TrendingReposTests.swift */; };
 		AF3444862A14697700FF8F31 /* APIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3444852A14697700FF8F31 /* APIServiceTests.swift */; };
 		AF3444882A146C2600FF8F31 /* MockAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3444872A146C2600FF8F31 /* MockAPIService.swift */; };
-		AF9C752B2A15147300613363 /* TrendingRepoViewController+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9C752A2A15147300613363 /* TrendingRepoViewController+TableViewDelegate.swift */; };
 		AF9C75312A15193200613363 /* TrendingRepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9C752F2A15193200613363 /* TrendingRepoTableViewCell.swift */; };
 		AF9C75322A15193200613363 /* TrendingRepoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF9C75302A15193200613363 /* TrendingRepoTableViewCell.xib */; };
 		AF9C75342A152CDF00613363 /* TrendingRepoTVCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9C75332A152CDF00613363 /* TrendingRepoTVCellViewModel.swift */; };
@@ -91,7 +90,6 @@
 		AF3444812A14609F00FF8F31 /* TrendingReposTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposTests.swift; sourceTree = "<group>"; };
 		AF3444852A14697700FF8F31 /* APIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceTests.swift; sourceTree = "<group>"; };
 		AF3444872A146C2600FF8F31 /* MockAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIService.swift; sourceTree = "<group>"; };
-		AF9C752A2A15147300613363 /* TrendingRepoViewController+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrendingRepoViewController+TableViewDelegate.swift"; sourceTree = "<group>"; };
 		AF9C752F2A15193200613363 /* TrendingRepoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoTableViewCell.swift; sourceTree = "<group>"; };
 		AF9C75302A15193200613363 /* TrendingRepoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendingRepoTableViewCell.xib; sourceTree = "<group>"; };
 		AF9C75332A152CDF00613363 /* TrendingRepoTVCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoTVCellViewModel.swift; sourceTree = "<group>"; };
@@ -212,7 +210,6 @@
 				AF02816A2A123B7E000C7BFA /* TrendingRepoViewController.swift */,
 				AF02819A2A124410000C7BFA /* TrendingRepoViewController.xib */,
 				AF3444692A13B06E00FF8F31 /* TrendingRepoViewModel.swift */,
-				AF9C752A2A15147300613363 /* TrendingRepoViewController+TableViewDelegate.swift */,
 				AF9C753D2A15519A00613363 /* Skeleton */,
 				AF9C752C2A15160900613363 /* TableViewCell */,
 			);
@@ -423,7 +420,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF0281992A1240DC000C7BFA /* Coordinator.swift in Sources */,
-				AF9C752B2A15147300613363 /* TrendingRepoViewController+TableViewDelegate.swift in Sources */,
 				AF3444702A13D88700FF8F31 /* APIService.swift in Sources */,
 				AF3444662A13A9B900FF8F31 /* Owner.swift in Sources */,
 				AFD1797F2A13184100D83548 /* APIManager.swift in Sources */,

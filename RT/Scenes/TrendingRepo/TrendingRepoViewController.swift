@@ -83,7 +83,6 @@ class TrendingRepoViewController: UIViewController {
             UINib(nibName: trendingRepoTableViewCell, bundle: nil),
             forCellReuseIdentifier: TrendingRepoTableViewCell.identifier
         )
-        tableView.delegate = self
     }
 
     // MARK: - Update SnapShot
