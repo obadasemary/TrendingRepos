@@ -59,12 +59,12 @@ class TrendingRepoViewController: UIViewController {
 
     private func fetchRepositories() {
 
-        viewModel.fetchTrendingRepositories {  [weak self] result, error  in
+        viewModel.fetchTrendingRepositories {  [weak self] result  in
             guard let self = self else { return }
 
             if result == nil {
                 DispatchQueue.main.async { [weak self] in
-                    print("Error with \(error)")
+
                 }
             } else {
                 print("Result \(result?[2])")

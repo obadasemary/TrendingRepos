@@ -43,7 +43,7 @@ class TrendingRepoTableViewCell: UITableViewCell {
         repoLanguageView.clipsToBounds = true
     }
 
-    func configureRepoCell(with viewModel: TrendingRepoTableViewCellViewModelProtocol) {
+    func configureRepoCell(with viewModel: TrendingRepoTVCellViewModelProtocol) {
 
         repoOwnerLabel.text = viewModel.repoOwner
         repoNameLabel.text = viewModel.repoName

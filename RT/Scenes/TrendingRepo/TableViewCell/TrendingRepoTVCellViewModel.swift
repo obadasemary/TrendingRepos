@@ -1,5 +1,5 @@
 //
-//  TrendingRepoCellViewModel.swift
+//  TrendingRepoTVCellViewModel.swift
 //  RT
 //
 //  Created by Abdelrahman Mohamed on 17.05.2023.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol TrendingRepoTableViewCellViewModelProtocol {
+protocol TrendingRepoTVCellViewModelProtocol {
 
     var repoAvatarUrl: URL { get }
     var repoName: String { get }
@@ -17,7 +17,7 @@ protocol TrendingRepoTableViewCellViewModelProtocol {
     var repoStarCount: String { get }
 }
 
-class TrendingRepoCellViewModel: TrendingRepoTableViewCellViewModelProtocol {
+class TrendingRepoTVCellViewModel: TrendingRepoTVCellViewModelProtocol {
 
     var repoAvatarUrl: URL
     var repoName: String
