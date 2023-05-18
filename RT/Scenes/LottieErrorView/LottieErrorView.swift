@@ -18,7 +18,7 @@ class LottieErrorView: UIView {
         super.awakeFromNib()
 
         titleLabel.font = .boldSystemFont(ofSize: 18)
-        subitleLabel.font = .systemFont(ofSize: 19)
+        subitleLabel.font = .systemFont(ofSize: 12)
         subitleLabel.textColor = .secondaryLabel
         retryButton.layer.cornerRadius = 8
         retryButton.layer.borderWidth = 2
