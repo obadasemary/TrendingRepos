@@ -22,6 +22,7 @@ class TrendingRepoViewController: UIViewController {
     // MARK: - @IBOutlet
 
     @IBOutlet weak var tableView: UITableView!
+    let refreshControl = UIRefreshControl()
 
     // MARK: - Properties
 
@@ -71,6 +72,7 @@ class TrendingRepoViewController: UIViewController {
         title = trendingRepoScreenTitle
 
         configureTableView()
+        configureRefreshControl()
         fetchRepositories()
     }
 
@@ -83,6 +85,22 @@ class TrendingRepoViewController: UIViewController {
             UINib(nibName: trendingRepoTableViewCell, bundle: nil),
             forCellReuseIdentifier: TrendingRepoTableViewCell.identifier
         )
+    }
+
+    func configureRefreshControl() {
+
+        refreshControl.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
+        refreshControl.tintColor = .systemGray
+        tableView.refreshControl = refreshControl
+    }
+
+    @objc func handleRefresh() {
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+            guard let self = self else { return }
+
+            self.fetchRepositories()
+        }
     }
 
     // MARK: - Update SnapShot
@@ -108,6 +126,7 @@ class TrendingRepoViewController: UIViewController {
             } else {
                 DispatchQueue.main.async { [weak self] in
                     self?.updateSnapShot(repos: result!)
+                    self?.refreshControl.endRefreshing(delay: 1.0)
                 }
             }
         }
