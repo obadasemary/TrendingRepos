@@ -50,6 +50,6 @@ class TrendingRepoTableViewCell: UITableViewCell {
         repoDescriptionLabel.text = viewModel.repoDescription
         repoLanguageLabel.text = viewModel.repoLanguage
         repoStartCountLabel.text = viewModel.repoStarCount
-        repoImageView.kf.setImage(with: viewModel.repoAvatarUrl)
+        repoImageView.kf.setImage(with: viewModel.repoAvatarUrl, placeholder: UIImage(named: "github"))
     }
 }
