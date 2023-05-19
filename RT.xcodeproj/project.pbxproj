@@ -172,14 +172,9 @@
 			isa = PBXGroup;
 			children = (
 				AF0281B42A129958000C7BFA /* Stub */,
-				AF0281A82A126EE3000C7BFA /* CoordinatorTests.swift */,
-				AF0281AE2A1288CE000C7BFA /* RequestTests.swift */,
-				AF3444732A1418AB00FF8F31 /* GithubRequestTests.swift */,
-				AF34447F2A145E3600FF8F31 /* TrendingRepoTests.swift */,
-				AF34447D2A145D1500FF8F31 /* OwnerTests.swift */,
-				AF3444812A14609F00FF8F31 /* TrendingReposTests.swift */,
-				AF3444872A146C2600FF8F31 /* MockAPIService.swift */,
-				AF3444852A14697700FF8F31 /* APIServiceTests.swift */,
+				AFF7B40B2A17EFC60024C0D6 /* Coordinator Tests */,
+				AFF7B40D2A17F0120024C0D6 /* Network Tests */,
+				AFF7B40C2A17EFF50024C0D6 /* Models Tests */,
 			);
 			path = RTTests;
 			sourceTree = "<group>";
@@ -320,6 +315,35 @@
 				AFF7B4092A17E7350024C0D6 /* SettingsViewModel.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		AFF7B40B2A17EFC60024C0D6 /* Coordinator Tests */ = {
+			isa = PBXGroup;
+			children = (
+				AF0281A82A126EE3000C7BFA /* CoordinatorTests.swift */,
+			);
+			path = "Coordinator Tests";
+			sourceTree = "<group>";
+		};
+		AFF7B40C2A17EFF50024C0D6 /* Models Tests */ = {
+			isa = PBXGroup;
+			children = (
+				AF34447F2A145E3600FF8F31 /* TrendingRepoTests.swift */,
+				AF34447D2A145D1500FF8F31 /* OwnerTests.swift */,
+				AF3444812A14609F00FF8F31 /* TrendingReposTests.swift */,
+			);
+			path = "Models Tests";
+			sourceTree = "<group>";
+		};
+		AFF7B40D2A17F0120024C0D6 /* Network Tests */ = {
+			isa = PBXGroup;
+			children = (
+				AF0281AE2A1288CE000C7BFA /* RequestTests.swift */,
+				AF3444732A1418AB00FF8F31 /* GithubRequestTests.swift */,
+				AF3444872A146C2600FF8F31 /* MockAPIService.swift */,
+				AF3444852A14697700FF8F31 /* APIServiceTests.swift */,
+			);
+			path = "Network Tests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
