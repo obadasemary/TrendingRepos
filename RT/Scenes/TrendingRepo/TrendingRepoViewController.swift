@@ -21,6 +21,7 @@ class TrendingRepoViewController: UIViewController {
 
     // MARK: - @IBOutlet
 
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var lottieErrorView: LottieErrorView!
     let refreshControl = UIRefreshControl()
@@ -98,6 +99,7 @@ class TrendingRepoViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
             guard let self = self else { return }
 
+            self.isPullToLoading = true
             self.fetchRepositories()
         }
     }
@@ -117,9 +119,16 @@ class TrendingRepoViewController: UIViewController {
 
     private func fetchRepositories() {
 
-        viewModel.fetchTrendingRepositories {  [weak self] result  in
-            guard let self = self else { return }
+        if !isPullToLoading {
 
+            activityIndicator.startAnimating()
+        }
+
+        viewModel.fetchTrendingRepositories {  [weak self] result  in
+            DispatchQueue.main.async { [weak self] in
+                self?.activityIndicator.stopAnimating()
+                self?.activityIndicator.hidesWhenStopped = true
+            }
             if result == nil {
                 DispatchQueue.main.async { [weak self] in
                     self?.lottieErrorView.isHidden = false
@@ -127,7 +136,7 @@ class TrendingRepoViewController: UIViewController {
             } else {
                 DispatchQueue.main.async { [weak self] in
                     self?.updateSnapShot(repos: result!)
-                    self?.refreshControl.endRefreshing(delay: 1.0)
+                    self?.refreshControl.endRefreshing(delay: 0.0)
                 }
             }
         }

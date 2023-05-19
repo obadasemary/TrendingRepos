@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TrendingRepoViewController" customModule="RT" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="dx3-KJ-m4f" id="m1I-PS-bfL"/>
                 <outlet property="lottieErrorView" destination="8k0-nx-Y0o" id="OjG-WP-URr"/>
                 <outlet property="tableView" destination="MY4-Hd-zlw" id="xoO-3R-vdz"/>
                 <outlet property="view" destination="rYY-bh-wcP" id="pEj-jQ-feO"/>
@@ -84,14 +85,19 @@
                         <outlet property="titleLabel" destination="j59-rn-Fpf" id="ab9-sy-oGu"/>
                     </connections>
                 </view>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="dx3-KJ-m4f">
+                    <rect key="frame" x="178" y="59" width="37" height="37"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="3ec-6O-fyY"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="3ec-6O-fyY" firstAttribute="bottom" secondItem="MY4-Hd-zlw" secondAttribute="bottom" id="0mr-aA-h7i"/>
+                <constraint firstItem="dx3-KJ-m4f" firstAttribute="top" secondItem="3ec-6O-fyY" secondAttribute="top" id="AVs-kO-O1C"/>
                 <constraint firstItem="3ec-6O-fyY" firstAttribute="bottom" secondItem="VQC-YF-DV4" secondAttribute="bottom" constant="40" id="ELn-gV-VE9"/>
                 <constraint firstItem="8k0-nx-Y0o" firstAttribute="top" secondItem="3ec-6O-fyY" secondAttribute="top" id="Ey8-a2-m4R"/>
                 <constraint firstItem="3ec-6O-fyY" firstAttribute="trailing" secondItem="8k0-nx-Y0o" secondAttribute="trailing" id="NDX-Hu-ecq"/>
+                <constraint firstItem="dx3-KJ-m4f" firstAttribute="centerX" secondItem="rYY-bh-wcP" secondAttribute="centerX" id="V3T-nQ-yqx"/>
                 <constraint firstItem="3ec-6O-fyY" firstAttribute="bottom" secondItem="8k0-nx-Y0o" secondAttribute="bottom" id="b3c-V3-LMT"/>
                 <constraint firstItem="8k0-nx-Y0o" firstAttribute="leading" secondItem="3ec-6O-fyY" secondAttribute="leading" id="k6C-G9-anL"/>
                 <constraint firstItem="MY4-Hd-zlw" firstAttribute="top" secondItem="3ec-6O-fyY" secondAttribute="top" id="mcG-Eg-tRG"/>
