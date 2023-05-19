@@ -49,6 +49,8 @@
 		AFEB58FE2A16E3DA0088EB4A /* lottieError.json in Resources */ = {isa = PBXBuildFile; fileRef = AFEB58FD2A16E3DA0088EB4A /* lottieError.json */; };
 		AFEB59002A16E93A0088EB4A /* LottieErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEB58FF2A16E93A0088EB4A /* LottieErrorView.swift */; };
 		AFEB59032A16EFFF0088EB4A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = AFEB59022A16EFFF0088EB4A /* Lottie */; };
+		AFF7B4072A17BD3D0024C0D6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF7B4052A17BD3D0024C0D6 /* SettingsViewController.swift */; };
+		AFF7B4082A17BD3D0024C0D6 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF7B4062A17BD3D0024C0D6 /* SettingsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +107,8 @@
 		AFEB58FA2A16DB6E0088EB4A /* RefreshControl+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RefreshControl+Ex.swift"; sourceTree = "<group>"; };
 		AFEB58FD2A16E3DA0088EB4A /* lottieError.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lottieError.json; sourceTree = "<group>"; };
 		AFEB58FF2A16E93A0088EB4A /* LottieErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieErrorView.swift; sourceTree = "<group>"; };
+		AFF7B4052A17BD3D0024C0D6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		AFF7B4062A17BD3D0024C0D6 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +204,7 @@
 			children = (
 				AF02819E2A1260F1000C7BFA /* TrendingRepo */,
 				AFEB58FC2A16E1350088EB4A /* LottieErrorView */,
+				AFF7B4042A17BD2D0024C0D6 /* Settings */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -305,6 +310,15 @@
 			path = LottieErrorView;
 			sourceTree = "<group>";
 		};
+		AFF7B4042A17BD2D0024C0D6 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				AFF7B4052A17BD3D0024C0D6 /* SettingsViewController.swift */,
+				AFF7B4062A17BD3D0024C0D6 /* SettingsViewController.xib */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -398,6 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF0281732A123B80000C7BFA /* LaunchScreen.storyboard in Resources */,
+				AFF7B4082A17BD3D0024C0D6 /* SettingsViewController.xib in Resources */,
 				AFEB58FE2A16E3DA0088EB4A /* lottieError.json in Resources */,
 				AF0281702A123B80000C7BFA /* Assets.xcassets in Resources */,
 				AF9C75322A15193200613363 /* TrendingRepoTableViewCell.xib in Resources */,
@@ -463,6 +478,7 @@
 				AF9C75442A157E6200613363 /* Color+Ex.swift in Sources */,
 				AF34446A2A13B06E00FF8F31 /* TrendingRepoViewModel.swift in Sources */,
 				AF0281692A123B7E000C7BFA /* SceneDelegate.swift in Sources */,
+				AFF7B4072A17BD3D0024C0D6 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
