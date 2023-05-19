@@ -11,7 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsViewController" customModule="RT" customModuleProvider="target">
             <connections>
-                <outlet property="switchControl" destination="LWe-JS-kLr" id="D6D-X2-tiA"/>
+                <outlet property="darkModeSwitchControl" destination="LWe-JS-kLr" id="D6D-X2-tiA"/>
+                <outlet property="errorModeSwitchControl" destination="6ME-iy-gbs" id="cTA-tM-LUi"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,30 +21,52 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="c3f-ht-TLD">
-                    <rect key="frame" x="20" y="79" width="353" height="31"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ehI-NH-g1R">
+                    <rect key="frame" x="20" y="79" width="353" height="82"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dark Appearance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CY4-mm-qmx">
-                            <rect key="frame" x="0.0" y="0.0" width="290" height="31"/>
-                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LWe-JS-kLr">
-                            <rect key="frame" x="304" y="0.0" width="51" height="31"/>
-                            <connections>
-                                <action selector="didTapSwitch:" destination="-1" eventType="valueChanged" id="7ky-RG-vIF"/>
-                            </connections>
-                        </switch>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="c3f-ht-TLD">
+                            <rect key="frame" x="0.0" y="0.0" width="353" height="31"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dark Appearance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CY4-mm-qmx">
+                                    <rect key="frame" x="0.0" y="0.0" width="290" height="31"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LWe-JS-kLr">
+                                    <rect key="frame" x="304" y="0.0" width="51" height="31"/>
+                                    <connections>
+                                        <action selector="didTapDarkModeSwitch:" destination="-1" eventType="valueChanged" id="t9z-ws-U34"/>
+                                    </connections>
+                                </switch>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="zSE-VZ-eNQ">
+                            <rect key="frame" x="0.0" y="51" width="353" height="31"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trigger Error Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZs-wZ-pqk">
+                                    <rect key="frame" x="0.0" y="0.0" width="290" height="31"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6ME-iy-gbs">
+                                    <rect key="frame" x="304" y="0.0" width="51" height="31"/>
+                                    <connections>
+                                        <action selector="didTapErrorModeSwitch:" destination="-1" eventType="valueChanged" id="qmP-ah-ggs"/>
+                                    </connections>
+                                </switch>
+                            </subviews>
+                        </stackView>
                     </subviews>
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="c3f-ht-TLD" secondAttribute="trailing" constant="20" id="826-nY-786"/>
-                <constraint firstItem="c3f-ht-TLD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="nLS-JF-nCp"/>
-                <constraint firstItem="c3f-ht-TLD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="nO9-bK-OdT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ehI-NH-g1R" secondAttribute="trailing" constant="20" id="2HE-w1-9fQ"/>
+                <constraint firstItem="ehI-NH-g1R" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="VK5-Ig-gjS"/>
+                <constraint firstItem="ehI-NH-g1R" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="pLK-vR-pz0"/>
             </constraints>
             <point key="canvasLocation" x="21" y="20"/>
         </view>
