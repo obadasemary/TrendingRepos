@@ -12,11 +12,13 @@ protocol TrendingRepoViewModelType {
     var trendingRepos: [TrendingRepo] { get }
     func fetchTrendingRepositories(completionHanlder: @escaping ([TrendingRepo]?) -> Void)
     func makeTrendingRepositoriesCellViewModel(at index: Int) -> TrendingRepoTVCellViewType
+    func goToSettings()
 }
 
 final class TrendingRepoViewModel: TrendingRepoViewModelType {
 
     private(set) var trendingRepos: [TrendingRepo] = []
+    var coordinator: Coordinator?
 
     var service: APIServiceProtocol
 
@@ -58,5 +60,10 @@ final class TrendingRepoViewModel: TrendingRepoViewModelType {
             repoLanguage: trendingRepo.language ?? "",
             repoStarCount: "\(trendingRepo.starCount)"
         )
+    }
+
+    func goToSettings() {
+
+        coordinator?.goingToSettingsController()
     }
 }
