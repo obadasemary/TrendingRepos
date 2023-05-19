@@ -13,7 +13,10 @@ SkeletonTableViewDataSource {
 
     var cellIdentifier = TrendingRepoTableViewCell.identifier
 
-    func collectionSkeletonView(_ skeletonView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func collectionSkeletonView(
+        _ skeletonView: UITableView,
+        numberOfRowsInSection section: Int
+    ) -> Int {
         return UITableView.automaticNumberOfSkeletonRows
     }
 
@@ -24,6 +27,8 @@ SkeletonTableViewDataSource {
     }
 
     func collectionSkeletonView(
-        _ skeletonView: UITableView, prepareCellForSkeleton cell: UITableViewCell, at indexPath: IndexPath
+        _ skeletonView: UITableView,
+        prepareCellForSkeleton cell: UITableViewCell,
+        at indexPath: IndexPath
     ) {}
 }
