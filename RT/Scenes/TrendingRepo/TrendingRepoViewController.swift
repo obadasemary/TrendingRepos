@@ -40,12 +40,9 @@ class TrendingRepoViewController: UIViewController {
                 for: indexPath
             ) as? TrendingRepoTableViewCell
 
-            DispatchQueue.main.async { [weak self] in
-
-                cell?.hideAnimation()
-                let viewModel = self?.viewModel.makeTrendingRepositoriesCellViewModel(at: indexPath.row)
-                cell?.configureRepoCell(with: viewModel!)
-            }
+            cell?.hideAnimation()
+            let viewModel = self.viewModel.makeTrendingRepositoriesCellViewModel(at: indexPath.row)
+            cell?.configureRepoCell(with: viewModel)
 
             return cell
         }
@@ -72,6 +69,7 @@ class TrendingRepoViewController: UIViewController {
         super.viewDidLoad()
         title = trendingRepoScreenTitle
 
+        lottieErrorView.delegate = self
         configureTableView()
         configureRefreshControl()
         fetchRepositories()
@@ -133,5 +131,13 @@ class TrendingRepoViewController: UIViewController {
                 }
             }
         }
+    }
+}
+
+extension TrendingRepoViewController: LottieErrorDelegate {
+    func didTapRetryButton() {
+
+        lottieErrorView.isHidden = true
+        fetchRepositories()
     }
 }
