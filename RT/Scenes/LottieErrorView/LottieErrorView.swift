@@ -8,9 +8,15 @@
 import UIKit
 import Lottie
 
+protocol LottieErrorDelegate: AnyObject {
+    func didTapRetryButton()
+}
+
 class LottieErrorView: UIView {
 
     static let lottieErrorJson = "lottieError"
+
+    weak var delegate: LottieErrorDelegate?
 
     @IBOutlet weak var animationView: LottieAnimationView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -32,4 +38,7 @@ class LottieErrorView: UIView {
         animationView.play()
     }
 
+    @IBAction func didTapRetryButton(_ sender: Any) {
+        delegate?.didTapRetryButton()
+    }
 }
