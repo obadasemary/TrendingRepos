@@ -11,6 +11,7 @@ protocol Coordinator: AnyObject {
 
     var navigationController: UINavigationController { get set }
     func setRootViewController()
+    func goingToSettingsController()
 }
 
 class MainCoordinator: Coordinator {
@@ -22,7 +23,15 @@ class MainCoordinator: Coordinator {
     }
 
     func setRootViewController() {
-        let trendingRepoViewController = TrendingRepoViewController()
+        let viewModel = TrendingRepoViewModel()
+        let trendingRepoViewController = TrendingRepoViewController(viewModel: viewModel)
+        viewModel.coordinator = self
         self.navigationController.pushViewController(trendingRepoViewController, animated: false)
+    }
+
+    func goingToSettingsController() {
+        let viewModel = SettingsViewModel()
+        let settingsViewController = SettingsViewController(viewModel: viewModel)
+        self.navigationController.pushViewController(settingsViewController, animated: true)
     }
 }
