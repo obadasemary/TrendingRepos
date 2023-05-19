@@ -70,7 +70,7 @@ class TrendingRepoTableViewCell: UITableViewCell {
         ].forEach { $0.hideSkeleton() }
     }
 
-    func configureRepoCell(with viewModel: TrendingRepoTVCellViewType) {
+    func configureRepoCell(with viewModel: TrendingRepoTVCellViewModelType) {
 
         repoOwnerLabel.text = viewModel.repoOwner
         repoNameLabel.text = viewModel.repoName
