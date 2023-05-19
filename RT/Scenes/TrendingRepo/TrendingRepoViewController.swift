@@ -27,7 +27,7 @@ class TrendingRepoViewController: UIViewController {
 
     // MARK: - Properties
 
-    var viewModel: TrendingRepoViewModelProtocol
+    var viewModel: TrendingRepoViewModelType
 
     lazy var dataSource: TableDataSource = {
 
@@ -57,7 +57,7 @@ class TrendingRepoViewController: UIViewController {
 
     // MARK: - Init
 
-    init(viewModel: TrendingRepoViewModelProtocol = TrendingRepoViewModel()) {
+    init(viewModel: TrendingRepoViewModelType = TrendingRepoViewModel()) {
         self.viewModel = viewModel
         super.init(nibName: "TrendingRepoViewController", bundle: nil)
     }
