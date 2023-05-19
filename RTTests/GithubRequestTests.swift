@@ -23,7 +23,7 @@ final class GithubRequestTests: XCTestCase {
 
         let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: true)
 
-        XCTAssertEqual(urlComponents?.host, APIConstants.baseURL.rawValue)
+        XCTAssertEqual(urlComponents?.host, globalbaseURL)
         XCTAssertEqual(urlComponents?.path, "/search/repositories")
         XCTAssertNotNil(urlComponents?.queryItems)
         XCTAssertEqual(urlComponents?.queryItems?.count, 1)

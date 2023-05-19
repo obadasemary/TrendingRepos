@@ -7,6 +7,8 @@
 
 import Foundation
 
+var globalbaseURL = "api.github.com"
+
 enum RequestType: String {
     case get = "GET"
     case post = "POST"
@@ -32,7 +34,8 @@ protocol RequestProtocol {
 extension RequestProtocol {
 
     var baseUrl: String {
-        APIConstants.baseURL.rawValue
+//        APIConstants.baseURL.rawValue
+        globalbaseURL
     }
 
     var params: [String: Any] {
