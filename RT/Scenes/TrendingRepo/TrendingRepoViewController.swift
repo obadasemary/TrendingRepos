@@ -29,6 +29,8 @@ class TrendingRepoViewController: UIViewController {
     // MARK: - Properties
 
     var viewModel: TrendingRepoViewModelType
+    weak var coordinator: Coordinator?
+    var isPullToLoading: Bool = false
 
     lazy var dataSource: TableDataSource = {
 
@@ -68,15 +70,39 @@ class TrendingRepoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = trendingRepoScreenTitle
 
+        configureNavigationView()
         lottieErrorView.delegate = self
         configureTableView()
         configureRefreshControl()
         fetchRepositories()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        title = trendingRepoScreenTitle
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        title = ""
+    }
+
     // MARK: - Configuration
+
+    func configureNavigationView() {
+
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            image: UIImage(systemName: "gear.badge"),
+            style: .plain,
+            target: self,
+            action: #selector(didTapOpenSetting)
+        )
+        navigationItem.rightBarButtonItem?.tintColor = .label
+        navigationController?.navigationBar.tintColor = .label
+    }
 
     func configureTableView() {
 
@@ -92,6 +118,11 @@ class TrendingRepoViewController: UIViewController {
         refreshControl.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
         refreshControl.tintColor = .systemGray
         tableView.refreshControl = refreshControl
+    }
+
+    @objc func didTapOpenSetting() {
+
+        viewModel.goToSettings()
     }
 
     @objc func handleRefresh() {
