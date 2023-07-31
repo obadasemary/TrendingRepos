@@ -15,7 +15,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var errorModeSwitchControl: UISwitch!
 
     let defaults = UserDefaults.standard
-    
+
     var viewModel: SettingsViewModelType
 
     init(viewModel: SettingsViewModelType = SettingsViewModel()) {
