@@ -20,6 +20,7 @@ protocol APIManager {
 
 extension APIManager {
 
+    @available(*, renamed: "perform(_:urlSession:responseModel:decoder:)")
     func perform<T: Decodable>(
         _ request: RequestProtocol,
         urlSession: URLSessionProtocol,
@@ -61,4 +62,18 @@ extension APIManager {
         }
         task.resume()
     }
+
+    func perform<T: Decodable>(
+        _ request: RequestProtocol,
+        urlSession: URLSessionProtocol,
+        responseModel: T.Type,
+        decoder: JSONDecoder
+    ) async throws -> T {
+        return try await withCheckedThrowingContinuation { continuation in
+            perform(request, urlSession: urlSession, responseModel: responseModel, decoder: decoder) { result in
+                continuation.resume(with: result)
+            }
+        }
+    }
+
 }
